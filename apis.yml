@@ -1,23 +1,78 @@
 aid: appstorys
+
 name: AppStorys
-description: 'AppStorys is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://appstorys.com/og-image.jpg
+
+description: 'AppStorys is a leading in‑app engagement platform that helps brands increase user stickiness and drive growth through interactive stories, push notifications, email, SMS, and WhatsApp marketing. Founded to empower consumer products and fintech companies, AppStorys powers over 370+ apps worldwide, offering tools such as picture‑in‑picture videos, banners, quizzes, and analytics to boost feature adoption and user engagement. The company has raised $5 million to expand globally and continues to innovate in mobile and web user experiences.'
+
 url: https://raw.githubusercontent.com/api-evangelist/appstorys/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-25'
+
 modified: '2026-09-25'
+
 tags:
 - Company
-apis: []
+- In-App Engagement
+- Mobile Marketing
+- User Analytics
+- Fintech
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Compliance
+  url: https://appstorys.com/security
+- type: LLMsTxt
+  url: llms/appstorys-llms.txt
+- type: WellKnown
+  url: well-known/appstorys-well-known.yml
+- type: Hosts
+  url: hosts/appstorys-hosts.yml
+- type: Vendors
+  url: vendors/appstorys-vendors.yml
+- type: Security
+  url: https://appstorys.com/security
+- type: PrivacyPolicy
+  url: https://appstorys.com/privacypolicy
+- type: Blog
+  url: https://appstorys.com/blog
+- type: Documentation
+  url: https://docs.appstorys.com/
+- type: TrustCenter
+  url: security/appstorys-trust-center.yml
+- type: DomainSecurity
+  url: security/appstorys-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://appstorys.com
+
+apis: []
+
+x-coverage:
+  state: gated
+  reason: partner-login
+  detail: Access to OpenAPI spec at https://api.appstorys.com/openapi.json returns HTTP 403, indicating a partner login wall.
+  evidence:
+    - url: https://api.appstorys.com/openapi.json
+      status: 403
+  checked: 2026-09-25
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 10
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local

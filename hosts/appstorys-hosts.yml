@@ -1,0 +1,77 @@
+generated: '2026-09-25'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 5
+  own: 4
+  other_domain: 1
+  platform: 0
+  roles:
+  - api
+  - docs
+  - other
+  - website
+hosts:
+- host: api.appstorys.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: appstorys.com
+  role: api
+  relation: own
+- host: appstorys.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Compliance
+  - Security
+  - PrivacyPolicy
+  - Blog
+  - Website
+  serves:
+  - cdn
+  vendor: cloudflare
+  registrable_domain: appstorys.com
+  role: website
+  relation: own
+- host: dashboard.appstorys.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: appstorys.com
+  role: other
+  relation: own
+- host: docs.appstorys.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - Documentation
+  serves:
+  - docs
+  registrable_domain: appstorys.com
+  role: docs
+  relation: own
+- host: docs.appstorys.com.md
+  found_by:
+  - docs-index
+  types: []
+  serves:
+  - docs
+  registrable_domain: appstorys.com.md
+  role: docs
+  relation: other-domain

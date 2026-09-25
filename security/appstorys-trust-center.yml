@@ -1,0 +1,14 @@
+generated: '2026-09-25'
+method: searched
+probe: true
+source: https://appstorys.com/security
+url: https://appstorys.com/security
+certifications:
+- SOC 2
+- GDPR
+evidence:
+- source: https://appstorys.com/security
+  keywords:
+  - soc 2
+  - soc2
+  - gdpr
